@@ -5,11 +5,11 @@
 {% block js%} 
 <script>
 function kill(pid_){
-    if(confirm('Sure?')) {
+    if(confirm('确定?')) {
         $.getJSON("{% url 'PiApp.api.kill_process_api' %}",  {pid : pid_}, 
             function(data){
                 if(data['msg'] != 'ok') {
-                    alert('failed');
+                    alert('失败');
                 }               
         });
     }  
@@ -28,17 +28,17 @@ function kill(pid_){
     <div class="box box-solid box-navy ">
       <div class="box-header">
         <i class="fa fa-laptop"></i>
-        <h3 class="box-title">Process</h3>
+        <h3 class="box-title">进程</h3>
       </div><!-- /.box-header -->
       <div class="box-body  ">
         <table class="table table-hover">
           <tbody><tr>
             <th style="width:8%;">PID</th>
-            <th style="width:15%;">Owner</th>
-            <th style="width:41%;">Command</th>
-            <th style="width:10%;">CPU usage (%)</th>
-            <th style="width:10%;">Memory usage (%)</th>
-            <th style="width:16%;">Kill</th>
+            <th style="width:15%;">所有者</th>
+            <th style="width:41%;">命令行</th>
+            <th style="width:10%;">CPU 占用率 (%)</th>
+            <th style="width:10%;">Memory 占用率 (%)</th>
+            <th style="width:16%;">终止</th>
           </tr>
           {% for item in process_info %}
           <tr>
