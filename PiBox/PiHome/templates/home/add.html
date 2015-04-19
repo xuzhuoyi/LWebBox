@@ -32,19 +32,19 @@ $(function() {
                 <div class="box-body  ">
                     {% csrf_token %}
                     <div class="form-group">
-                        <label for="id_name">Device Name</label>
-                        <p class="help-block">Get a name for your device,no more than 30 chars</p>
+                        <label for="id_name">设备名称</label>
+                        <p class="help-block">给你的设备取一个名字,不超过 20 个字符</p>
                         {{form.name}} 
                         {{form.name.errors}} 
                     </div>
-                    <label for="id_describe">Describe</label>
+                    <label for="id_describe">描述</label>
                     <div class="form-group django-form">                       
                         {{form.describe}} 
                         {{form.describe.errors}} 
                     </div>
                     <div class="form-group">
-                        <label for="id_location">Location</label>
-                        <p class="help-block">Like : Bathroom</p>
+                        <label for="id_location">位置</label>
+                        <p class="help-block">比如:浴室</p>
                         {{form.location}} 
                         {{form.location.errors}} 
                     </div>
@@ -78,7 +78,7 @@ $(function() {
 
                 </div><!-- /.box-body -->
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="submit" class="btn btn-primary">保存</button>
                 </div>
             </form>
         </div><!-- /.box -->
