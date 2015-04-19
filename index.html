@@ -28,17 +28,17 @@
       </header>
       <section>
         <h1>
-<a id="pibox" class="anchor" href="#pibox" aria-hidden="true"><span class="octicon octicon-link"></span></a>PiBox</h1>
+<a id="lwebbox" class="anchor" href="#lwebbox" aria-hidden="true"><span class="octicon octicon-link"></span></a>LWebBox</h1>
 
-<p>PiBox is a web control Interface running on Embedded Board, written in python and django.<br>
-With PiBox，you can do things like that:
+<p>LWebBox 是一个在嵌入式设备运行的 Web 控制界面,使用 Python and Django 编写.<br>
+使用 LWebBox，你可以实现以下的功能:
 <img src="http://www.iotwrt.com/jpg/pb1.png" alt="image"></p>
 
 <h2>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+<a id="使用方法" class="anchor" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>使用方法</h2>
 
-<p>See these steps for a  build guide(cd Pibox).<br>
-First install the dependencies:</p>
+<p>下面是构建步骤(请先执行 cd Pibox).<br>
+首先安装依赖:</p>
 
 <pre><code>sudo apt-get install python-pip python-dev build-essential  libjsoncpp-dev libjpeg-dev zlib1g-dev
 sudo apt-get install python-setuptools
@@ -47,50 +47,45 @@ sudo pip install Django==1.6.6
 sudo apt-get install scons
 </code></pre>
 
-<p>Then run building script:</p>
+<p>然后运行构建脚本:</p>
 
 <pre><code>sudo sh ./install_source.sh
 sudo sh ./install_env.sh
 </code></pre>
 
-<p>Start and stop scripts:</p>
+<p>启动和停止的脚本:</p>
 
 <pre><code>sudo sh ./start.sh 
 sudo sh ./stop.sh
 </code></pre>
 
-<p>After run the start script,open your browser and go to the URL:</p>
+<p>在运行启动脚本后,打开你的浏览器然后访问以下 URL:</p>
 
-<pre><code>http://192.168.10.105(your board's ip):8000
+<pre><code>http://192.168.10.105(你设备的 IP):8000
 </code></pre>
 
-<p>(File browser use /home/shares）</p>
+<p>(文件浏览器使用 /home/shares）</p>
 
-<p>uninstall and reinstall：
-    delete the folder and do these steps again.</p>
+<p>删除或重新安装：
+    删除文件夹然后重复以上步骤。</p>
 
 <h2>
-<a id="feature" class="anchor" href="#feature" aria-hidden="true"><span class="octicon octicon-link"></span></a>Feature</h2>
+<a id="特点" class="anchor" href="#%E7%89%B9%E7%82%B9" aria-hidden="true"><span class="octicon octicon-link"></span></a>特点</h2>
 
 <ul>
 <li>native iot platform(connect your hardwares to web, like yeelink).</li>
-<li>File Browser.</li>
+<li>文件浏览器.</li>
 <li>Web ssh.</li>
-<li>host status monitor.</li>
+<li>主机状态监视.</li>
 <li>webcam snapshot.</li>
-<li>GPIO control.</li>
+<li>GPIO 控制.</li>
 <li><a href="https://github.com/wzyy2/PiBox/wiki/Feature">more here</a></li>
 </ul>
 
 <h2>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+<a id="开源许可证" class="anchor" href="#%E5%BC%80%E6%BA%90%E8%AE%B8%E5%8F%AF%E8%AF%81" aria-hidden="true"><span class="octicon octicon-link"></span></a>开源许可证</h2>
 
-<p>PiBox is free software;you can redistribute it and/or modify it under terms of the GNU General Public License version 2 as published by the Free Software Foundation.</p>
-
-<h2>
-<a id="ps" class="anchor" href="#ps" aria-hidden="true"><span class="octicon octicon-link"></span></a>PS</h2>
-
-<p>If you want more background on how it works,create an issue or email me:-).</p>
+<p>LWenBox 是一个自由软件；you can redistribute it and/or modify it under terms of the GNU General Public License version 2 as published by the Free Software Foundation.</p>
 
 <h2>
 <a id="faq" class="anchor" href="#faq" aria-hidden="true"><span class="octicon octicon-link"></span></a>FAQ</h2>
@@ -104,14 +99,6 @@ sudo sh ./stop.sh
 
 <p><img src="http://www.iotwrt.com/jpg/pb2.jpg" alt="image">
 <img src="http://www.iotwrt.com/jpg/pb3.jpg" alt="image"></p>
-
-<h1>
-<a id="chinese" class="anchor" href="#chinese" aria-hidden="true"><span class="octicon octicon-link"></span></a>Chinese</h1>
-
-<h2>
-<a id="介绍" class="anchor" href="#%E4%BB%8B%E7%BB%8D" aria-hidden="true"><span class="octicon octicon-link"></span></a>介绍</h2>
-
-<p>写这个PiBox的初衷是现在智能硬件的概念很火,打着家庭网关称号的路由器层出不穷,什么智能家居拉,带摄像头拉,控制家电拉,做小车阿,作者也手痒,于是就着手开始做这么一个web base的嵌入式交互应用(好文绉绉..).</p>
 
 <h2>
 <a id="app" class="anchor" href="#app" aria-hidden="true"><span class="octicon octicon-link"></span></a>App</h2>
