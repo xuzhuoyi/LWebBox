@@ -1,0 +1,65 @@
+{% extends "base-user.html" %}
+
+{% block css%}    
+{% endblock %}
+{% block js%}  
+<script>
+$(function() {
+    if($('#id_sensor_class').val() != 'n')
+        $('#form-unit').css('display', 'None');
+    else
+        $('#form-unit').css('display', 'block');
+    $('#id_sensor_class').change(function(){
+        if($('#id_sensor_class').val() != 'n')
+            $('#form-unit').css('display', 'None');
+        else
+            $('#form-unit').css('display', 'block');
+    });
+});
+</script>
+{% endblock %}
+
+
+{% block on_ready%}    
+{% endblock %}
+
+{% block content %} 
+<div class="row">      
+    <div class="col-md-12">
+        <div class="box box-solid box-navy ">
+            <div class="box-header">
+                <h3 class="box-title">Sensor</h3>
+            </div><!-- /.box-header -->
+            <form action="" method="POST">
+                <div class="box-body  ">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="id_name">Sensor Name</label>
+                        {{form.name}} 
+                        {{form.name.errors}} 
+                    </div>
+                    <label for="id_describe">Describe</label>
+                    <div class="form-group">
+                        {{form.describe}} 
+                        {{form.describe.errors}} 
+                    </div>
+                    <div class="form-group">
+                        <label for="id_sensor_class">Sensor Class</label>
+                        {{form.sensor_class}} 
+                        {{form.sensor_class.errors}} 
+                    </div>
+                    <div id="form-unit"class="form-group" style="display:None;">
+                        <label for="id_unit">Unit</label>
+                        <p class="help-block">Like : ℃</p>
+                        {{form.unit}} 
+                        {{form.unit.errors}}                           
+                    </div>
+                </div><!-- /.box-body -->
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </div><!-- /.box -->
+    </div>
+</div>	
+{% endblock %}
