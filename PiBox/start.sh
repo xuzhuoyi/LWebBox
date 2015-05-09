@@ -34,6 +34,8 @@ ip=`ifconfig  | grep 'inet addr:'| grep -v '127.0.0.1' | cut -d: -f2 | awk '{ pr
 
 echo "http://$ip:8000  or others"
 
-nohup ./CppClient/pihome > ./log/cpp.log 2>&1 &  
-nohup python ./PiHome/WebShell/webshell.py --ssl-disable 0 > ./log/pihome-webshell.log 2>&1 & 
-nohup python ./PiHome/manage.py runserver 0.0.0.0:8000 > ./log/pihome.log 2>&1 & 
+echo "http://$ip:8000" > ip
+
+nohup ./CppClient/pihome > ./log/cpp.log 2>&1 &
+nohup python ./PiHome/WebShell/webshell.py --ssl-disable 0 > ./log/pihome-webshell.log 2>&1 &
+nohup python ./PiHome/manage.py runserver 0.0.0.0:8000 > ./log/pihome.log 2>&1 &
