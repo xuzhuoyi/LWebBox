@@ -15,3 +15,5 @@ pids=`ps aux|grep 'webshell.py'|grep -v 'grep'|awk -F' ' '{print $2}'`
 if [ "$pids" ];then
    kill -9 $pids
 fi
+
+rm ip
